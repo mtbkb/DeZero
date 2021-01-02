@@ -3,23 +3,9 @@ if '__file__' in globals():
     import sys
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-
 import numpy as np
 from dezero import Variable
-
-
-def sphere(x, y):
-    z = x ** 2 + y ** 2
-    return z
-
-
-def sim(x,y):
-    return 3 * (x - y)
-
-
-def matyas(x, y):
-    z = 0.26 * (x ** 2 + y ** 2) - 0.48 * x * y
-    return z
+from dezero.utils import plot_dot_graph
 
 
 def goldstein(x, y):
@@ -33,4 +19,8 @@ x = Variable(np.array(1.0))
 y = Variable(np.array(1.0))
 z = goldstein(x, y)
 z.backward()
-print(x.grad, y.grad)
+
+x.name = 'x'
+y.name = 'y'
+z.name = 'z'
+plot_dot_graph(z, verbose=False, to_file='goldstein.png')

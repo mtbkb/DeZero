@@ -255,6 +255,7 @@ def rsub(x0, x1):
 
 
 def mul(x0, x1):
+    x1 = as_array(x1)
     return Mul()(x0, x1)
 
 
@@ -291,3 +292,4 @@ def setup_variable():
     Variable.__truediv__ = div
     Variable.__rtruediv__ = rdiv
     Variable.__pow__ = pow
+    return
