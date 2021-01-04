@@ -73,11 +73,3 @@ def plot_dot_graph(output, verbose=True, to_file='graph.png'):
 
 
 
-x = Variable(np.array(1.0))
-x2 = Variable(np.array(1.0))
-x.name = 'x'
-x2.name = 'x2'
-y = x + x2
-print(_dot_var(x))
-print(_dot_var(x, verbose=True))
-print(_dot_func(y.creator))
