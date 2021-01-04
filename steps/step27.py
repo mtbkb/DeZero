@@ -47,5 +47,4 @@ x.name = 'x'
 y.name = 'y'
 
 
-
 plot_dot_graph(y, verbose=False, to_file='sin.png')
