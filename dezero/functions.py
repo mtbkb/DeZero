@@ -64,7 +64,7 @@ class Tanh(Function):
         return gx
 
 
-class Sum(FUnction):
+class Sum(Function):
     def __init__(self, axis, keepdims):
         self.axis = axis
         self.keepdims = keepdims
@@ -82,6 +82,7 @@ class Sum(FUnction):
 
 def sum(x, axis=None, keepdims=False):
     return Sum(axis, keepdims)(x)
+
 
 class SumTo(Function):
     def __init__(self, shape):
