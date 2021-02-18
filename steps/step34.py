@@ -28,3 +28,6 @@ for i, v in enumerate(logs):
     plt.plot(x.data, logs[i], label=labels[i])
 plt.legend(loc='lower right')
 plt.show()
+
+
+print(test)
