@@ -32,3 +32,6 @@ plt.show()
 
 print("test commit")
 print("follow the reaper")
+print("commmit on feature branch")
+print("second commit on feature branch")
+print("third commit on feature branch")
